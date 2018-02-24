@@ -4,6 +4,8 @@ var utils = require('../lib/utils/utils.js');
 var assert = chai.assert;
 
 var tests = [
+    { value: '𠜎', expected: '0xf0a09c8e' },
+    { value: '㼿', expected: '0xe3bcbf' },
     { value: 'myString', expected: '0x6d79537472696e67'},
     { value: 'myString\x00', expected: '0x6d79537472696e67'},
     { value: 'expected value\u0000\u0000\u0000', expected: '0x65787065637465642076616c7565'}
